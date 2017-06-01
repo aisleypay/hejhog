@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530142838) do
+ActiveRecord::Schema.define(version: 20170601141812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "base_and_main_paths", force: :cascade do |t|
-    t.integer "base_url_id"
-    t.integer "main_path_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "base_urls", force: :cascade do |t|
     t.string "site_name"
@@ -31,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170530142838) do
 
   create_table "main_paths", force: :cascade do |t|
     t.string "main_branch"
+    t.integer "base_url_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -7,42 +7,21 @@ site3 = BaseUrl.create(site_name: "An API of Ice and Fire", base_url: "https://a
 
 #create main paths for those urls
 #starwars
-MainPath.create(main_branch: "people/")
-MainPath.create(main_branch: "planets/")
-MainPath.create(main_branch: "films/")
-MainPath.create(main_branch: "species/")
-MainPath.create(main_branch: "vehicles/")
-MainPath.create(main_branch: "starships/")
+MainPath.create(main_branch: "people/", base_url_id: 1)
+MainPath.create(main_branch: "planets/", base_url_id: 1)
+MainPath.create(main_branch: "films/", base_url_id: 1)
+MainPath.create(main_branch: "species/", base_url_id: 1)
+MainPath.create(main_branch: "vehicles/", base_url_id: 1)
+MainPath.create(main_branch: "starships/", base_url_id: 1)
 
 #pokemon
-MainPath.create(main_branch: "pokemon/")
-MainPath.create(main_branch: "type/")
-MainPath.create(main_branch: "ability/")
-MainPath.create(main_branch: "pokemon-habitat/")
-MainPath.create(main_branch: "pokedex/")
+MainPath.create(main_branch: "pokemon/", base_url_id: 2)
+MainPath.create(main_branch: "type/", base_url_id: 2)
+MainPath.create(main_branch: "ability/", base_url_id: 2)
+MainPath.create(main_branch: "pokemon-habitat/", base_url_id: 2)
+MainPath.create(main_branch: "pokedex/", base_url_id: 2)
 
 #GOT books
-MainPath.create(main_branch: "books/")
-MainPath.create(main_branch: "characters/")
-MainPath.create(main_branch: "houses/")
-
-# join table
-#starwars
-BaseAndMainPath.create(base_url_id: 1, main_path_id: 1)
-BaseAndMainPath.create(base_url_id: 1, main_path_id: 2)
-BaseAndMainPath.create(base_url_id: 1, main_path_id: 3)
-BaseAndMainPath.create(base_url_id: 1, main_path_id: 4)
-BaseAndMainPath.create(base_url_id: 1, main_path_id: 5)
-BaseAndMainPath.create(base_url_id: 1, main_path_id: 6)
-
-#pokemon
-BaseAndMainPath.create(base_url_id: 2, main_path_id: 7)
-BaseAndMainPath.create(base_url_id: 2, main_path_id: 8)
-BaseAndMainPath.create(base_url_id: 2, main_path_id: 9)
-BaseAndMainPath.create(base_url_id: 2, main_path_id: 10)
-BaseAndMainPath.create(base_url_id: 2, main_path_id: 11)
-
-#GOT
-BaseAndMainPath.create(base_url_id: 3, main_path_id: 12)
-BaseAndMainPath.create(base_url_id: 3, main_path_id: 13)
-BaseAndMainPath.create(base_url_id: 3, main_path_id: 14)
+MainPath.create(main_branch: "books/", base_url_id: 3)
+MainPath.create(main_branch: "characters/", base_url_id: 3)
+MainPath.create(main_branch: "houses/", base_url_id: 3)
