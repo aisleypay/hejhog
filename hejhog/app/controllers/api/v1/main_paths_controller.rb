@@ -17,7 +17,6 @@ class Api::V1::MainPathsController < ApplicationController
     render json: main_path_url, include: [base_url: {only: [:id, :base_url]}], only: [:id, :main_branch, :base_url_id]
   end
 
-
   private
 
   def main_path_params

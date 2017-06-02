@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :base_urls, only: [:index, :new, :create, :show]
+      resources :base_urls, only: [:index, :new, :create, :show, :destroy]
       resources :main_paths
     end
   end

@@ -17,6 +17,14 @@ class Api::V1::BaseUrlsController < ApplicationController
     render json: url, include: [main_paths: {only: [:id, :main_branch]}], only: [:id, :site_name, :base_url]
   end
 
+  def destroy
+    base_url = BaseUrl.find(params[:id])
+    base_url.main_paths.each do |path|
+      path.destroy
+    end
+    base_url.destroy
+  end
+
   private
 
   def base_url_params
